@@ -11,44 +11,44 @@ jobs:
       fail-fast: false
       matrix:
         settings:
-          - host: ubuntu-latest
-            target: i686-unknown-linux-gnu
-          - host: ubuntu-latest
-            target: i686-unknown-linux-musl
-          - host: ubuntu-latest
+          # - host: ubuntu-latest
+          #   target: i686-unknown-linux-gnu
+          # - host: ubuntu-latest
+          #   target: i686-unknown-linux-musl
+          # - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
           - host: ubuntu-latest
-            target: x86_64-unknown-linux-musl
-          - host: ubuntu-latest
-            target: aarch64-unknown-linux-gnu
-          - host: ubuntu-latest
-            target: aarch64-unknown-linux-musl
-          - host: ubuntu-latest
-            target: riscv64gc-unknown-linux-gnu
-            setup: |
-                  sudo apt-get update
-                  sudo apt-get install gcc-riscv64-linux-gnu g++-riscv64-linux-gnu -y
-          - host: ubuntu-latest
-            target: armv7-unknown-linux-gnueabihf
-            setup: |
-                  sudo apt-get update
-                  sudo apt-get install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf -y
-          - host: macos-latest
-            target: x86_64-apple-darwin
-          - host: macos-latest
-            target: aarch64-apple-darwin
-          - host: windows-latest
-            target: i686-pc-windows-gnu
-            ext: .exe
-          - host: windows-latest
-            target: i686-pc-windows-msvc
-            ext: .exe
-          - host: windows-latest
-            target: x86_64-pc-windows-gnu
-            ext: .exe
-          - host: windows-latest
-            target: x86_64-pc-windows-msvc
-            ext: .exe
+          #   target: x86_64-unknown-linux-musl
+          # - host: ubuntu-latest
+          #   target: aarch64-unknown-linux-gnu
+          # - host: ubuntu-latest
+          #   target: aarch64-unknown-linux-musl
+          # - host: ubuntu-latest
+          #   target: riscv64gc-unknown-linux-gnu
+          #   setup: |
+          #         sudo apt-get update
+          #         sudo apt-get install gcc-riscv64-linux-gnu g++-riscv64-linux-gnu -y
+          # - host: ubuntu-latest
+          #   target: armv7-unknown-linux-gnueabihf
+          #   setup: |
+          #         sudo apt-get update
+          #         sudo apt-get install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf -y
+          # - host: macos-latest
+          #   target: x86_64-apple-darwin
+          # - host: macos-latest
+          #   target: aarch64-apple-darwin
+          # - host: windows-latest
+          #   target: i686-pc-windows-gnu
+          #   ext: .exe
+          # - host: windows-latest
+          #   target: i686-pc-windows-msvc
+          #   ext: .exe
+          # - host: windows-latest
+          #   target: x86_64-pc-windows-gnu
+          #   ext: .exe
+          # - host: windows-latest
+          #   target: x86_64-pc-windows-msvc
+          #   ext: .exe
 
     name: ${{ matrix.settings.target }}
     runs-on: ${{ matrix.settings.host }}
